@@ -1,4 +1,4 @@
-Handwriting Project based on DL4J API
+Handwriting Recognition Project based on DL4J API
 =========================
 Repositori ini berisi source code untuk pengenal tulisan tangan
 dengan model pengenal Convolutional Neural Net. Bahasa yang digunakan adalah Java
