@@ -1,34 +1,43 @@
-Deeplearning4J Examples 
+Handwriting Project based on DL4J API
 =========================
-Repository of Deeplearning4J neural net examples:
+Repositori ini berisi source code untuk pengenal tulisan tangan
+dengan model pengenal Convolutional Neural Net. Bahasa yang digunakan adalah Java
 
-- MLP Neural Nets
-- Convolutional Neural Nets
-- Recurrent Neural Nets
-- TSNE
-- Word2Vec & GloVe
-- Anomaly Detection
+Arsitektur ConvNet dibangun menggunakan API DeepLearning4Java.
 
 ---
 
 ## Build and Run
 
-Use [Maven](https://maven.apache.org/) to build the examples. 
+Untuk menjalankan project ini, terlebih dahulu download dan install [Maven](https://maven.apache.org/), [IntelliJ] (http://jetbrains.com/) dan Java. 
 
+Pastikan versi Java yang digunakan adalah yang paling baru dengan perintah berikut
 ```
-mvn clean package
-```
-
-Run the `runexamples.sh` script to run the examples (requires [bash](https://www.gnu.org/software/bash/)). It will list the examples and prompt you for the one to run. Pass the `--all` argument to run all of them. (Other options are shown with `-h`).
-
-```
-./runexamples.sh [-h | --help]
+java -version
 ```
 
+Pastikan versi Maven yang digunakan adalah yang paling baru dengan perintah berikut
+```
+mvn --version
+```
 
-## Documentation
-For more information, check out [deeplearning4j.org](http://deeplearning4j.org/) and its [JavaDoc](http://deeplearning4j.org/doc/).
+Untuk mac, install Maven dengan perintah berikut
+```
+brew install maven
+```
 
-If you notice issues, please log them, and if you want to contribute, submit a pull request. Input is welcome here.
 
+Selanjutnya, import project ini ke IntelliJ dengan cara File -> New -> Project from Existing Sources.
+Pada window selanjutnya pilih Import project from external model dan pastikan Maven yang terpilih.
+
+## Catatan
+
+Pada file ConvNet.java, ada beberapa hal yang harus diperhatikan. Pastikan line berikut sesuai dengan direktori tempat penyimpanan dataset
+```
+File parentDir = new File("/Volumes/Data/adrian/Datasets/Capt/");
+```
+Line berikut juga harus diperhatikan untuk tempat penyimpanan hasil training. Sesuaikan dengan direktori pada penyimpanan lokal
+```
+File file = new File("/Volumes/Data/HandwritingProject/Train Result .txt");
+```
 
